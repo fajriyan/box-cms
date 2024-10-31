@@ -1,0 +1,39 @@
+name: fajriyan
+super: true
+id: 549da6d9-c349-45af-81c7-ba37f59d64b2
+password_hash: $2y$12$FCoh/CnVSgzjDnP5opbj/..VvunLAx0pDLTELvoQ7gWI5WM7LDu4G
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+  theme: light
+  nav:
+    content:
+      reorder:
+        - 'content::collections::pages'
+        - 'content::collections::career'
+        - 'content::booking'
+        - 'content::collections'
+        - 'content::navigation'
+      items:
+        'content::collections::pages':
+          action: '@move'
+          icon: book-pages
+        'content::collections::career':
+          action: '@move'
+          icon: users-multiple
+        'content::booking':
+          action: '@create'
+          display: Booking
+          url: booking
+          icon: calendar
+        'content::taxonomies::career_division': '@move'
+  forms:
+    career_form:
+      columns:
+        - datestamp
+        - email
+        - name
+        - phone
+        - link_linkedin
+        - job
