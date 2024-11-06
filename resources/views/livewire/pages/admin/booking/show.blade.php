@@ -1,5 +1,10 @@
 <div>
     <div class="mb-3 flex gap-3">
+        <select class="bg-white rounded-md px-3 min-w-[100px]" wire:model.live='pagination'>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
         <select class="bg-white rounded-md px-3 min-w-[100px]" wire:model.live='catSearch'>
             <option value="name">Name</option>
             <option value="email">Email</option>
@@ -34,7 +39,8 @@
         <tbody>
             @forelse ($data as $item)
             <tr class="hover:bg-gray-100">
-                <td class="py-2 px-2.5 border-b">{{ $loop->iteration }}</td>
+                <td class="py-2 px-2.5 border-b">{{ ($data->currentPage() - 1) *
+                    $data->perPage() + $loop->iteration }}</td>
                 <td class="py-2 px-2.5 border-b">{{ $item->unique_id }}</td>
                 <td class="py-2 px-2.5 border-b">{{ $item->name }}</td>
                 <td class="py-2 px-2.5 border-b">{{ $item->email }}</td>

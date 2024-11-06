@@ -11,15 +11,17 @@ class Show extends Component
     use WithPagination;
     protected $paginationTheme = 'tailwind';
     public $search;
+    public $pagination;
     public $catSearch;
 
     public function mount()
     {
         $this->catSearch = 'name';
+        $this->pagination = 10;
     }
     public function render()
     {
-        $data = Booking::where($this->catSearch, 'like', '%' . $this->search . '%')->paginate(5);
+        $data = Booking::where($this->catSearch, 'like', '%' . $this->search . '%')->paginate($this->pagination);
         return view('livewire.pages.admin.booking.show', ['data' => $data]);
     }
 

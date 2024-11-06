@@ -1,5 +1,4 @@
 <div>
-
     <div class="mb-5 flex justify-between">
         <a href="/admin/booking" class="flex items-center bg-slate-700 text-white px-2 rounded-md">
             <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +63,7 @@
                     <div class="">
                         <label class="block text-sm font-medium text-gray-700">Berakhir</label>
                         <input type="datetime-local" wire:model="end_booking"
-                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
-                            readonly>
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
                         @error('end_booking') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                     </div>
                 </div>

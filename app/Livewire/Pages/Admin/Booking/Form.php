@@ -55,12 +55,26 @@ class Form extends Component
         Booking::where('id', $id)->update([
             'status' => $status
         ]);
+        session()->flash('success', $status . " booking");
         redirect('/admin/booking/' . $this->id);
     }
 
     public function save()
     {
-        dd("saved");
+        Booking::where('id', $this->id)->update([
+            'name' => $this->name,
+            'email' => $this->email,
+            'location' => $this->location,
+            'notes' => $this->otherInfo,
+            'start_booking' => $this->start_booking,
+            'end_booking' => $this->end_booking,
+            'id_package' => $this->packageId,
+            'name_package' => $this->packageName,
+            'price' => str_replace(["Rp ", "."], "", $this->pricePackage ?? "-"),
+            'updated_at' => now(),
+        ]);
+        session()->flash('success', "Saved Success!");
+        redirect('/admin/booking');
     }
 
 }
