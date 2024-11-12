@@ -28,9 +28,6 @@ Route::middleware(['statamic.cp'])->group(function () {
       }
       abort(403, 'Anda tidak memiliki izin untuk mengakses halaman ini.');
    });
-
-
-
    Route::get('/admin/booking', function () {
       $user = User::current();
       if (!$user) {

@@ -13,15 +13,34 @@ class Show extends Component
     public $search;
     public $pagination;
     public $catSearch;
+    public $sortField = 'start_booking'; // Default sorting field
+    public $sortDirection = 'desc';
+
+    public function updatedSearch()
+    {
+        $this->resetPage();
+    }
 
     public function mount()
     {
         $this->catSearch = 'name';
         $this->pagination = 10;
     }
+    public function sortBy($field)
+    {
+        if ($this->sortField === $field) {
+            $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            $this->sortDirection = 'asc';
+        }
+        $this->sortField = $field;
+    }
     public function render()
     {
-        $data = Booking::where($this->catSearch, 'like', '%' . $this->search . '%')->paginate($this->pagination);
+        $data = Booking::where($this->catSearch, 'like', '%' . $this->search . '%')
+                        ->orderBy($this->sortField, $this->sortDirection)
+                        ->paginate($this->pagination);
+
         return view('livewire.pages.admin.booking.show', ['data' => $data]);
     }
 

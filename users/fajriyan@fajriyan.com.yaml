@@ -6,28 +6,79 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+    career:
+      columns:
+        - title
+        - career_division
+        - career_location
+        - salary
+        - career_position
+        - career_role
   theme: light
   nav:
-    content:
-      reorder:
-        - 'content::collections::pages'
-        - 'content::collections::career'
-        - 'content::booking'
-        - 'content::collections'
-        - 'content::navigation'
-      items:
-        'content::collections::pages':
-          action: '@move'
-          icon: book-pages
-        'content::collections::career':
-          action: '@move'
-          icon: users-multiple
-        'content::booking':
-          action: '@create'
-          display: Booking
-          url: booking
-          icon: calendar
-        'content::taxonomies::career_division': '@move'
+    reorder:
+      - content
+      - career
+      - dev
+      - tools
+      - settings
+    sections:
+      content:
+        reorder:
+          - 'content::collections::pages'
+          - 'content::booking'
+          - 'content::globals'
+          - 'content::assets'
+        items:
+          'content::collections::pages':
+            action: '@move'
+            icon: book-pages
+          'content::booking':
+            action: '@create'
+            display: Booking
+            url: booking
+            icon: calendar
+          'content::globals':
+            display: Template
+            action: '@modify'
+            icon: file-code
+          'content::assets':
+            display: 'Media Library'
+            action: '@modify'
+      career:
+        action: '@create'
+        display: Career
+        items:
+          'content::collections::career':
+            action: '@move'
+            icon: users-multiple
+            display: 'Management Career'
+          'content::taxonomies::career_division':
+            action: '@move'
+            icon: settings-horizontal
+          'content::taxonomies::career_position':
+            action: '@move'
+            icon: nav-preferences
+          'content::taxonomies::career_location':
+            action: '@move'
+            icon: synchronize
+          'content::taxonomies::career_role':
+            action: '@move'
+            icon: shield-key
+          'tools::forms::career_form': '@move'
+      dev:
+        action: '@create'
+        display: Dev
+        items:
+          'content::navigation': '@move'
+          'content::taxonomies': '@move'
+          'content::collections': '@move'
+          'tools::forms': '@move'
+          'fields::blueprints': '@move'
+          'fields::fieldsets': '@move'
+          'tools::updates': '@move'
+          'tools::addons': '@move'
+          'tools::utilities': '@move'
   forms:
     career_form:
       columns:
@@ -37,3 +88,6 @@ preferences:
         - phone
         - link_linkedin
         - job
+  assets:
+    assets:
+      mode: grid
