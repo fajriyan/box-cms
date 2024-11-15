@@ -25,7 +25,9 @@ cms project using laravel, this time I used the statamic package as the core of 
 
 ### Database 
 you can download the database in the .sql file or in the `/backup` directory, [download](https://github.com/fajriyan/box-cms/tree/main/backup)
+#### `node : please download the latest database by date`
 
+<br>
 
 ## How to run project
 a few things that need to be prepared:
