@@ -10,17 +10,39 @@ cms project using laravel, this time I used the statamic package as the core of 
 
 ### Screenshot 
 - [Admin] Management Pages
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/f162413f-e236-43b9-95c9-3bb240bfa18f">
+
 - [Admin] Media Library
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/90695158-de68-4f86-814a-ad8a45db86b2">
+
 - [Admin] Career Manegement
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/59c9087d-69c8-42e4-bf41-72c33e33cdec">
+
 - [Admin] Career Taxonomy
+  <img width="1679" alt="image" src="https://github.com/user-attachments/assets/be531e69-66a4-49f9-a8ea-c9926a253edc">
+
 - [Admin] Management Booking
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/3a628401-25bf-4ba3-be01-3a663516c896">
+
 - [Admin] Detail Booking
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/101b261d-41be-4de4-bccd-226419703547">
+
 - [Site] Homepage
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/5a27622e-a05f-4a6c-9d27-939e67999a6b">
+
 - [Site] Booking
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/6c0563b5-ba8d-47e9-a6a6-9838e5e84b65">
+
 - [Site] Detail Booking
 - [Site] Check Code Booking
+  
+
 - [Site] Career
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/bfc3709b-a35b-466c-a0fe-d7d2b1532719">
+  
 - [Site] Detail Career
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/31dfb38a-2407-4cba-a9fd-5562aa22be0f">
+
 
 
 ### Database 
