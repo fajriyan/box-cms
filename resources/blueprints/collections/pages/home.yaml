@@ -1,0 +1,270 @@
+order: 1
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+            handle: title
+          -
+            field:
+              type: text
+              display: 'Secondary Text'
+              validate:
+                - required
+            handle: secondary_text
+          -
+            field:
+              type: text
+              display: 'Main Heading'
+              validate:
+                - required
+            handle: main_heading
+          -
+            field:
+              type: textarea
+              display: 'Main Description'
+              validate:
+                - required
+            handle: main_description
+          -
+            field:
+              type: section
+              display: Button
+            handle: button
+          -
+            field:
+              type: text
+              width: 50
+              display: 'Text Button Left'
+              validate:
+                - required
+            handle: text_button_left
+          -
+            field:
+              type: text
+              width: 50
+              display: 'Text Button Right'
+              validate:
+                - required
+            handle: text_button_right
+          -
+            field:
+              type: link
+              width: 50
+              display: 'Link Button Left'
+              validate:
+                - required
+            handle: link_button_left
+          -
+            field:
+              type: link
+              width: 50
+              display: 'Link Button Right'
+              validate:
+                - required
+            handle: link_button_right
+          -
+            field:
+              type: section
+              display: Logo
+            handle: button_duplicate
+          -
+            field:
+              type: text
+              display: 'Mini Text Highlight Logo'
+              validate:
+                - required
+            handle: mini_text_highlight_logo
+          -
+            field:
+              sets:
+                new_set_group:
+                  sets:
+                    item:
+                      fields:
+                        -
+                          field:
+                            type: assets
+                            display: Logo
+                            container: assets
+                            max_files: 1
+                            min_files: 1
+                          handle: logo
+                      display: Item
+                  display: 'New Set Group'
+              type: replicator
+              display: 'Logo Hightlight'
+            handle: logo_hightlight
+        display: 'Main Section'
+      -
+        fields:
+          -
+            field:
+              type: text
+              display: 'Heading Featured'
+              validate:
+                - required
+            handle: heading_featured
+          -
+            field:
+              type: textarea
+              display: 'Featured Description'
+              validate:
+                - required
+            handle: featured_description
+          -
+            field:
+              sets:
+                new_set_group:
+                  sets:
+                    item:
+                      fields:
+                        -
+                          field:
+                            type: icon
+                            display: Icon
+                            validate:
+                              - required
+                          handle: icon
+                        -
+                          field:
+                            type: text
+                            display: Title
+                            validate:
+                              - required
+                          handle: title
+                        -
+                          field:
+                            type: textarea
+                            display: Description
+                            validate:
+                              - required
+                          handle: description
+                      display: Item
+                  display: 'New Set Group'
+              type: replicator
+              display: 'Featured Grid'
+            handle: featured_grid
+        display: 'Section Featured'
+      -
+        fields:
+          -
+            field:
+              type: text
+              display: 'Heading Us'
+              validate:
+                - required
+            handle: heading_us
+          -
+            field:
+              type: markdown
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+              display: 'Description Us'
+            handle: description_us
+          -
+            field:
+              type: assets
+              width: 50
+              display: 'Picture Overview 1'
+              validate:
+                - required
+              container: assets
+              max_files: 1
+              min_files: 1
+            handle: picture_overview_1
+          -
+            field:
+              type: assets
+              width: 50
+              display: 'Picture Overview 2'
+              validate:
+                - required
+              container: assets
+              max_files: 1
+              min_files: 1
+            handle: picture_overview_2
+          -
+            field:
+              type: section
+              display: Statistics
+            handle: statistics
+          -
+            field:
+              sets:
+                new_set_group:
+                  sets:
+                    item:
+                      fields:
+                        -
+                          field:
+                            type: text
+                            display: Number
+                            validate:
+                              - required
+                          handle: number
+                        -
+                          field:
+                            type: text
+                            display: 'Short Description'
+                            validate:
+                              - required
+                          handle: short_description
+                      display: Item
+                  display: 'New Set Group'
+              type: replicator
+              display: 'Statistic Grid'
+            handle: statistic_grid
+        display: 'Section Overview Us'
+      -
+        fields:
+          -
+            field:
+              type: assets
+              display: 'Gallery Best'
+              container: assets
+            handle: gallery_best
+        display: 'Section Gallery'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              validate: 'max:200'
+              localizable: true
+            handle: slug
+          -
+            field:
+              type: entries
+              listable: false
+              max_items: 1
+              collections:
+                - pages
+              localizable: true
+            handle: parent
+          -
+            field:
+              type: template
+              display: Template
+            handle: template
+  seo_tools:
+    display: 'SEO Tools'
+    sections:
+      -
+        fields:
+          -
+            import: seo_tools
+        display: 'SEO Tools'
+title: Home

@@ -1,0 +1,216 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+            handle: title
+          -
+            field:
+              type: bard
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              display: Description
+              validate:
+                - required
+              save_html: true
+              remove_empty_nodes: false
+            handle: description
+          -
+            field:
+              type: text
+              display: Salary
+              validate:
+                - required
+            handle: salary
+          -
+            field:
+              type: textarea
+              display: Address
+              validate:
+                - required
+            handle: address
+      -
+        fields:
+          -
+            field:
+              type: bard
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              display: Requirements
+              validate:
+                - required
+              save_html: true
+              remove_empty_nodes: false
+            handle: requirements
+          -
+            field:
+              type: section
+              display: Skills
+            handle: skills_section
+          -
+            field:
+              type: bard
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              display: Skills
+              validate:
+                - required
+              save_html: true
+              remove_empty_nodes: false
+            handle: skills
+          -
+            field:
+              type: section
+              display: Qualifications
+            handle: qualifications_section
+          -
+            field:
+              type: bard
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              display: Qualifications
+              validate:
+                - required
+              save_html: true
+              remove_empty_nodes: false
+            handle: qualifications
+          -
+            field:
+              type: section
+              display: More
+            handle: more
+          -
+            field:
+              type: text
+              width: 50
+              display: 'Work Experience'
+              validate:
+                - required
+            handle: work_experience
+          -
+            field:
+              type: text
+              width: 50
+              display: 'Required Candidates'
+              validate:
+                - required
+            handle: required_candidates
+        display: 'Requirements & Skills'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              validate:
+                - required
+                - 'max:200'
+              localizable: true
+            handle: slug
+          -
+            field:
+              type: date
+              default: now
+              required: true
+              validate:
+                - required
+            handle: date
+          -
+            field:
+              type: users
+              default:
+                - 549da6d9-c349-45af-81c7-ba37f59d64b2
+              display: Author
+              validate:
+                - required
+              max_items: 1
+              localizable: true
+            handle: author
+          -
+            field:
+              type: template
+              folder: layouts/career
+              display: Template
+              validate:
+                - required
+              localizable: true
+            handle: template
+          -
+            field:
+              type: section
+              display: Category
+            handle: category
+          -
+            field:
+              mode: select
+              type: terms
+              display: 'Career Division'
+              validate:
+                - required
+              max_items: 1
+              taxonomies:
+                - career_division
+            handle: career_division
+          -
+            field:
+              mode: select
+              type: terms
+              display: 'Career Location'
+              validate:
+                - required
+              max_items: 1
+              taxonomies:
+                - career_location
+            handle: career_location
+          -
+            field:
+              mode: select
+              type: terms
+              display: 'Career Position'
+              validate:
+                - required
+              max_items: 1
+              taxonomies:
+                - career_position
+            handle: career_position
+          -
+            field:
+              mode: select
+              type: terms
+              display: 'Career Role'
+              validate:
+                - required
+              max_items: 1
+              taxonomies:
+                - career_role
+            handle: career_role
+title: Career

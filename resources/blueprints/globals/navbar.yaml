@@ -1,0 +1,29 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: grid
+              fields:
+                -
+                  field:
+                    type: text
+                    width: 50
+                    display: Title
+                    validate:
+                      - required
+                  handle: title
+                -
+                  field:
+                    type: link
+                    width: 50
+                    display: Link
+                    validate:
+                      - required
+                  handle: link
+              display: Menu
+            handle: menu
+        display: Navbar

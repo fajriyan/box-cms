@@ -13,6 +13,7 @@
         "barryvdh/laravel-dompdf": "^3.0",
         "flowframe/laravel-trend": "^0.3.0",
         "jonassiewertsen/statamic-livewire": "^3.8",
+        "justbetter/statamic-image-optimize": "^3.2",
         "laravel/framework": "^11",
         "laravel/tinker": "^2.9",
         "statamic/cms": "^5.0",

@@ -1,0 +1,35 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+            handle: title
+          -
+            field:
+              type: users
+              default: current
+              display: Author
+              max_items: 1
+              localizable: true
+            handle: author
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              required: true
+              validate:
+                - required
+                - 'max:200'
+            handle: slug
+title: 'Career Role'

@@ -1,0 +1,34 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+            handle: title
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              validate: 'max:200'
+              localizable: true
+            handle: slug
+          -
+            field:
+              type: entries
+              listable: false
+              max_items: 1
+              collections:
+                - pages
+              localizable: true
+            handle: parent
+title: About

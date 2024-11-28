@@ -1,0 +1,219 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+            handle: title
+          -
+            field:
+              type: text
+              display: 'Main Heading'
+              validate:
+                - required
+            handle: main_heading
+          -
+            field:
+              type: textarea
+              display: 'Main Description'
+            handle: main_description
+          -
+            field:
+              type: section
+              display: Pricing
+            handle: pricing
+          -
+            field:
+              sets:
+                new_set_group:
+                  sets:
+                    item:
+                      fields:
+                        -
+                          field:
+                            type: text
+                            display: Title
+                            validate:
+                              - required
+                          handle: title
+                        -
+                          field:
+                            type: textarea
+                            display: Description
+                            validate:
+                              - required
+                          handle: description
+                        -
+                          field:
+                            type: text
+                            width: 66
+                            display: Price
+                            validate:
+                              - required
+                          handle: price
+                        -
+                          field:
+                            type: select
+                            width: 33
+                            display: '@'
+                            options:
+                              -
+                                key: Hari
+                                value: null
+                              -
+                                key: Bulan
+                                value: null
+                              -
+                                key: Tahun
+                                value: null
+                            validate:
+                              - required
+                          handle: per
+                        -
+                          field:
+                            type: grid
+                            fields:
+                              -
+                                field:
+                                  type: toggle
+                                  width: 25
+                                  display: available
+                                handle: available
+                              -
+                                field:
+                                  type: text
+                                  width: 75
+                                  display: item
+                                handle: item
+                            display: Featured
+                          handle: featured
+                      display: Item
+                  display: 'New Set Group'
+              type: replicator
+              display: 'Pricing Grid'
+              max_sets: 3
+            handle: pricing_grid
+        display: 'Main Section'
+      -
+        fields:
+          -
+            field:
+              type: text
+              display: 'Heading Testimoni'
+              validate:
+                - required
+            handle: heading_testimoni
+          -
+            field:
+              sets:
+                new_set_group:
+                  sets:
+                    item:
+                      fields:
+                        -
+                          field:
+                            type: textarea
+                            display: Value
+                            validate:
+                              - required
+                          handle: value
+                        -
+                          field:
+                            type: text
+                            width: 50
+                            display: Person
+                            validate:
+                              - required
+                          handle: person
+                        -
+                          field:
+                            max: 5
+                            type: range
+                            width: 50
+                            default: 4
+                            display: Rating
+                            validate:
+                              - required
+                          handle: rating
+                      display: Item
+                  display: 'New Set Group'
+              type: replicator
+              display: Testimonial
+              validate:
+                - required
+            handle: testimonial
+        display: 'Testimonial Section'
+      -
+        fields:
+          -
+            field:
+              type: text
+              display: 'Heading FAQ'
+              validate:
+                - required
+            handle: heading_faq
+          -
+            field:
+              sets:
+                new_set_group:
+                  sets:
+                    item:
+                      fields:
+                        -
+                          field:
+                            type: text
+                            display: Title
+                            validate:
+                              - required
+                          handle: title
+                        -
+                          field:
+                            type: bard
+                            buttons:
+                              - bold
+                              - italic
+                              - anchor
+                            display: Description
+                            validate:
+                              - required
+                            save_html: true
+                            remove_empty_nodes: false
+                          handle: description
+                      display: Item
+                  display: 'New Set Group'
+              type: replicator
+              display: 'FAQ Item'
+            handle: faq_item
+        display: 'FAQ Section'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              validate: 'max:200'
+              localizable: true
+            handle: slug
+          -
+            field:
+              type: entries
+              listable: false
+              max_items: 1
+              collections:
+                - pages
+              localizable: true
+            handle: parent
+          -
+            field:
+              type: template
+              display: Layout
+            handle: template
+title: Booking

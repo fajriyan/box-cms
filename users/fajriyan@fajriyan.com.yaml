@@ -6,14 +6,37 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+      filters:
+        publish:
+          display: Publish
+          filters:
+            status:
+              status: published
+        draft:
+          display: Draft
+          filters:
+            status:
+              status: draft
     career:
       columns:
         - title
+        - salary
         - career_division
         - career_location
-        - salary
         - career_position
         - career_role
+        - status
+      filters:
+        active:
+          display: Active
+          filters:
+            status:
+              status: published
+        non_active:
+          display: Non-Active
+          filters:
+            status:
+              status: draft
   theme: light
   nav:
     reorder:
@@ -88,6 +111,3 @@ preferences:
         - phone
         - link_linkedin
         - job
-  assets:
-    assets:
-      mode: grid

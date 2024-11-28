@@ -1,0 +1,17 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              display: 'Google Analytics'
+            handle: google_analytics
+          -
+            field:
+              type: text
+              display: 'Google Search Console'
+            handle: google_search_console
+        display: 'Site Configuration'

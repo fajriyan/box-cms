@@ -1,0 +1,46 @@
+title: 'SEO Tools'
+fields:
+  -
+    field:
+      type: text
+      display: 'Meta Title'
+    handle: meta_title
+  -
+    field:
+      type: text
+      display: 'Meta Description'
+    handle: meta_description
+  -
+    field:
+      type: text
+      display: 'Meta Canonical'
+    handle: meta_canonical
+  -
+    field:
+      type: select
+      display: 'Meta Robots'
+      options:
+        -
+          key: 'index, follow'
+          value: null
+        -
+          key: 'index, nofollow'
+          value: null
+        -
+          key: 'noindex, follow'
+          value: null
+        -
+          key: 'noindex, nofollow'
+          value: null
+      taggable: true
+    handle: meta_robots
+  -
+    field:
+      type: assets
+      display: 'Featured Image'
+      validate:
+        - required
+      container: assets
+      max_files: 1
+      min_files: 1
+    handle: featured_image

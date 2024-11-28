@@ -1,0 +1,84 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+            handle: name
+          -
+            field:
+              type: text
+              display: Email
+              validate:
+                - required
+              input_type: email
+            handle: email
+          -
+            field:
+              type: text
+              display: Phone
+              validate:
+                - required
+              input_type: tel
+            handle: phone
+          -
+            field:
+              type: text
+              display: 'Link LinkedIn'
+              validate:
+                - required
+              input_type: url
+            handle: link_linkedin
+          -
+            field:
+              type: text
+              display: 'Job Name'
+              validate:
+                - required
+            handle: job_name
+          -
+            field:
+              type: text
+              display: 'Job Salary'
+              validate:
+                - required
+            handle: job_salary
+          -
+            field:
+              type: text
+              display: 'Job Position'
+              validate:
+                - required
+            handle: job_position
+          -
+            field:
+              type: text
+              display: 'Job Division'
+              validate:
+                - required
+            handle: job_division
+          -
+            field:
+              type: text
+              display: 'Job Role'
+              validate:
+                - required
+            handle: job_role
+          -
+            field:
+              type: text
+              display: 'Job Location'
+              validate:
+                - required
+            handle: job_location
+          -
+            field:
+              type: text
+              display: 'Job Date'
+            handle: job_date

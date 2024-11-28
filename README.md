@@ -58,6 +58,11 @@ a few things that need to be prepared:
 - composer v2.7^ or above
 - node v20.15^ or above
 
+## Access Login
+- email : fajriyan@fajriyan.com
+- password : fajriyan
+- url : http://127.0.0.1:8000/admin/auth/login
+
 
 ### Project Run Steps
 

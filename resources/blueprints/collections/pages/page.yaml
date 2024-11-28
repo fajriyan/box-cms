@@ -1,0 +1,50 @@
+tabs:
+  main:
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+            handle: title
+          -
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+            handle: content
+          -
+            field:
+              type: users
+              default: current
+              display: Author
+              max_items: 1
+              localizable: true
+            handle: author
+          -
+            field:
+              type: template
+              display: Template
+              localizable: true
+            handle: template
+  sidebar:
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              validate: 'max:200'
+              localizable: true
+            handle: slug
+          -
+            field:
+              type: entries
+              listable: false
+              max_items: 1
+              collections:
+                - pages
+              localizable: true
+            handle: parent
+title: Page

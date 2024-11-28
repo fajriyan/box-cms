@@ -1,0 +1,57 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+            handle: title
+          -
+            field:
+              type: text
+              display: 'Main Heading'
+              validate:
+                - required
+            handle: main_heading
+          -
+            field:
+              type: textarea
+              display: 'Main Description'
+              validate:
+                - required
+            handle: main_description
+        display: 'Main Section'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            field:
+              type: slug
+              validate: 'max:200'
+              localizable: true
+            handle: slug
+          -
+            field:
+              type: entries
+              listable: false
+              max_items: 1
+              collections:
+                - pages
+              localizable: true
+            handle: parent
+          -
+            field:
+              type: template
+              folder: layouts/career
+              display: Template
+              validate:
+                - required
+            handle: template
+title: 'Career Index'

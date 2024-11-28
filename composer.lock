@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee9a81b4639d4be15fc5d84a3e33fc9f",
+    "content-hash": "4b91a868d4e3dbe561d3b52c413ef012",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1721,6 +1721,74 @@
                 }
             ],
             "time": "2024-10-01T13:00:01+00:00"
+        },
+        {
+            "name": "justbetter/statamic-image-optimize",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justbetter/statamic-image-optimize.git",
+                "reference": "1b831e3586a6bdb3168a330bf3c375510a815c01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justbetter/statamic-image-optimize/zipball/1b831e3586a6bdb3168a330bf3c375510a815c01",
+                "reference": "1b831e3586a6bdb3168a330bf3c375510a815c01",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "laravel/framework": "^10.0 || ^11.0",
+                "league/glide": "^2.2",
+                "php": "^8.1|^8.2|^8.3",
+                "statamic/cms": "^5.0"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.5",
+                "laravel/pint": "^1.7",
+                "orchestra/testbench": "^8.0|^9.0",
+                "pestphp/pest": "^2.0",
+                "phpstan/phpstan-mockery": "^1.1",
+                "phpunit/phpunit": "^10.1"
+            },
+            "type": "package",
+            "extra": {
+                "statamic": {
+                    "name": "Image Optimize",
+                    "description": "Image optimization after upload"
+                },
+                "laravel": {
+                    "providers": [
+                        "JustBetter\\ImageOptimize\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JustBetter\\ImageOptimize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Meijer",
+                    "email": "kevin@justbetter.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Image optimization after upload",
+            "keywords": [
+                "asset-uploads",
+                "justbetter"
+            ],
+            "support": {
+                "issues": "https://github.com/justbetter/statamic-image-optimize/issues",
+                "source": "https://github.com/justbetter/statamic-image-optimize/tree/3.2.0"
+            },
+            "time": "2024-11-05T09:35:13+00:00"
         },
         {
             "name": "laragraph/utils",
@@ -5092,16 +5160,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v5.38.0",
+            "version": "v5.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "211c276f0195d65db5308f8446170d83130e0d53"
+                "reference": "2cb135cf7a09af927b12b15ce3538bdc99622438"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/211c276f0195d65db5308f8446170d83130e0d53",
-                "reference": "211c276f0195d65db5308f8446170d83130e0d53",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/2cb135cf7a09af927b12b15ce3538bdc99622438",
+                "reference": "2cb135cf7a09af927b12b15ce3538bdc99622438",
                 "shasum": ""
             },
             "require": {
@@ -5186,7 +5254,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v5.38.0"
+                "source": "https://github.com/statamic/cms/tree/v5.40.0"
             },
             "funding": [
                 {
@@ -5194,20 +5262,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-12T18:12:01+00:00"
+            "time": "2024-11-26T22:16:39+00:00"
         },
         {
             "name": "statamic/eloquent-driver",
-            "version": "v4.17.0",
+            "version": "v4.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/eloquent-driver.git",
-                "reference": "4440a8b5252aadc82960861ed4d728c3257a4cc8"
+                "reference": "b5ed5ba2b794b753449f5d2dfdd8c445fefdfb09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/eloquent-driver/zipball/4440a8b5252aadc82960861ed4d728c3257a4cc8",
-                "reference": "4440a8b5252aadc82960861ed4d728c3257a4cc8",
+                "url": "https://api.github.com/repos/statamic/eloquent-driver/zipball/b5ed5ba2b794b753449f5d2dfdd8c445fefdfb09",
+                "reference": "b5ed5ba2b794b753449f5d2dfdd8c445fefdfb09",
                 "shasum": ""
             },
             "require": {
@@ -5244,9 +5312,9 @@
             "description": "Allows you to store Statamic data in a database.",
             "support": {
                 "issues": "https://github.com/statamic/eloquent-driver/issues",
-                "source": "https://github.com/statamic/eloquent-driver/tree/v4.17.0"
+                "source": "https://github.com/statamic/eloquent-driver/tree/v4.18.0"
             },
-            "time": "2024-11-13T13:33:34+00:00"
+            "time": "2024-11-20T08:00:32+00:00"
         },
         {
             "name": "statamic/stringy",
@@ -10661,12 +10729,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
