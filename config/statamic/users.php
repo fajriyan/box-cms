@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'repository' => 'file',
+    // 'repository' => 'file',
+    'repository' => 'eloquent',
 
     'repositories' => [
 
