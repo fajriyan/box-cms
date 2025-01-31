@@ -1,16 +1,12 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./content/**/*.md",
-    "./resources/views/**/*.antlers.html",
-    "./resources/views/**/*.antlers.php",
-    "./resources/views/**/*.blade.php",
-    "./resources/views/vendor/**/*.blade.php",
-    "./resources/views/vendor/statamic/**/*.blade.php",
-    "./resources/views/vendor/statamic/partials/*.blade.php",
-    "./resources/views/**/*.blade.php",
-    "./resources/**/*.blade.php",
-    "./resources/js/**/*.js",
+    './content/**/*.md',
+    './resources/views/**/*.antlers.html',
+    './resources/views/**/*.antlers.php',
+    './resources/views/**/*.blade.php',
+    './resources/**/*.blade.php',
+    './resources/js/**/*.js',
   ],
   theme: {
     extend: {
