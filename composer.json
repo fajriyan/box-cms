@@ -10,12 +10,14 @@
     ],
     "require": {
         "php": "^8.2",
+        "alt-design/alt-redirect": "^1.6",
+        "alt-design/alt-sitemap": "^1.3",
         "barryvdh/laravel-dompdf": "^3.0",
         "flowframe/laravel-trend": "^0.3.0",
-        "marcorieser/statamic-livewire": "^3.8",
         "justbetter/statamic-image-optimize": "^3.2",
         "laravel/framework": "^11",
         "laravel/tinker": "^2.9",
+        "marcorieser/statamic-livewire": "^3.8",
         "statamic/cms": "^5.0",
         "statamic/eloquent-driver": "^4.15"
     },

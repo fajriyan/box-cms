@@ -1,0 +1,12 @@
+{
+  "resources/css/alt-redirect-addon.css": {
+    "file": "assets/alt-redirect-addon-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/css/alt-redirect-addon.css"
+  },
+  "resources/js/alt-redirect-addon.js": {
+    "file": "assets/alt-redirect-addon-d5a1e6a6.js",
+    "isEntry": true,
+    "src": "resources/js/alt-redirect-addon.js"
+  }
+}
