@@ -1,46 +1,87 @@
 title: 'SEO Tools'
 fields:
   -
+    handle: meta_title
     field:
       type: text
       display: 'Meta Title'
-    handle: meta_title
   -
+    handle: meta_description
     field:
       type: text
       display: 'Meta Description'
-    handle: meta_description
   -
+    handle: meta_canonical
     field:
       type: text
       display: 'Meta Canonical'
-    handle: meta_canonical
+      instructions: 'meta canonical can be automatic if it is empty'
   -
+    handle: meta_author
     field:
-      type: select
-      display: 'Meta Robots'
+      type: users
+      display: 'Meta Author'
+  -
+    handle: robots
+    field:
       options:
         -
-          key: 'index, follow'
-          value: null
+          key: index
+          value: index
         -
-          key: 'index, nofollow'
-          value: null
+          key: follow
+          value: Follow
         -
-          key: 'noindex, follow'
-          value: null
+          key: noindex
+          value: 'No Index'
         -
-          key: 'noindex, nofollow'
-          value: null
-      taggable: true
-    handle: meta_robots
+          key: nofollow
+          value: 'No Follow'
+        -
+          key: noarchive
+          value: 'No Archive'
+        -
+          key: noimageindex
+          value: 'No Image Index'
+        -
+          key: nosnippet
+          value: 'No Snippet'
+      inline: true
+      type: checkboxes
+      display: Robots
+      instructions: 'if left blank then the default is "noindex, nofollow"'
   -
+    handle: meta_featured_image
     field:
-      type: assets
-      display: 'Featured Image'
-      validate:
-        - required
-      container: assets
       max_files: 1
       min_files: 1
-    handle: featured_image
+      container: assets
+      type: assets
+      display: 'Meta Featured Image'
+      validate:
+        - image
+  -
+    handle: last_update
+    field:
+      time_enabled: true
+      type: date
+      display: 'Last Update'
+  -
+    handle: custom_script
+    field:
+      type: toggle
+      display: 'Custom Script'
+  -
+    handle: header_script
+    field:
+      type: code
+      display: 'Header Script'
+      if:
+        custom_script: 'equals true'
+  -
+    handle: footer_script
+    field:
+      type: code
+      display: 'Footer Script'
+      if:
+        custom_script: 'equals true'

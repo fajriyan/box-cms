@@ -15,19 +15,7 @@ Route::get('/step', StepTrial::class);
 
 
 
-Route::middleware(['statamic.cp'])->group(function () {
-   Route::get('/admin/livewire-page', function () {
-      $user = User::current();
-
-      if (!$user) {
-         return redirect('/admin')->withErrors('Silakan login terlebih dahulu.');
-      }
-
-      if ($user->isSuper()) {
-         return view('Pages.Admin.Test');
-      }
-      abort(403, 'Anda tidak memiliki izin untuk mengakses halaman ini.');
-   });
+Route::middleware(['web', 'can:access cp'])->group(function () {
    Route::get('/admin/booking', function () {
       $user = User::current();
       if (!$user) {
