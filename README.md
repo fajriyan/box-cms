@@ -9,20 +9,23 @@ cms project using laravel, this time I used the statamic package as the core of 
 - AlpineJS
 
 ### Screenshot 
+- [Admin] Dashboard
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/39cf6d3a-53de-4c5f-aca5-164b9816e5f6" />
+
 - [Admin] Management Pages
-  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/f162413f-e236-43b9-95c9-3bb240bfa18f">
+  <img width="1677" alt="image" src="https://github.com/user-attachments/assets/6b13cf58-e514-4a76-a10a-c1a1a10c002e" />
 
 - [Admin] Media Library
-  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/90695158-de68-4f86-814a-ad8a45db86b2">
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/10a7a15f-93f8-439b-ab00-e5cd43243d4e" />
 
 - [Admin] Career Manegement
-  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/59c9087d-69c8-42e4-bf41-72c33e33cdec">
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/8c8db295-78c5-400f-98fe-2c10e9911c4e" />
 
 - [Admin] Career Taxonomy
-  <img width="1679" alt="image" src="https://github.com/user-attachments/assets/be531e69-66a4-49f9-a8ea-c9926a253edc">
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/dbad452d-0f75-4f52-b615-b8a45f8a2786" />
 
 - [Admin] Management Booking
-  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/3a628401-25bf-4ba3-be01-3a663516c896">
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/2db6a70d-b97c-4b53-8646-ecc444e70042" />
 
 - [Admin] Detail Booking
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/101b261d-41be-4de4-bccd-226419703547">
@@ -34,8 +37,10 @@ cms project using laravel, this time I used the statamic package as the core of 
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/6c0563b5-ba8d-47e9-a6a6-9838e5e84b65">
 
 - [Site] Detail Booking
-- [Site] Check Code Booking
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/71b4e202-37fd-4aae-a312-4473be455649" />
   
+- [Site] Check Code Booking
+  <img width="1680" alt="image" src="https://github.com/user-attachments/assets/58c376ec-ce2e-4c63-bf69-b9aa77ba28a0" />
 
 - [Site] Career
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/bfc3709b-a35b-466c-a0fe-d7d2b1532719">
