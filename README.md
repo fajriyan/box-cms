@@ -14,7 +14,10 @@ cms project using laravel, this time I used the statamic package as the core of 
 
 - [Admin] Management Pages
   <img width="1677" alt="image" src="https://github.com/user-attachments/assets/6b13cf58-e514-4a76-a10a-c1a1a10c002e" />
+- [Admin] Dynamic Content bg Components
+  ![image](https://github.com/user-attachments/assets/909f994e-e925-4ffb-825f-35e83b5021d9)
 
+   
 - [Admin] Media Library
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/10a7a15f-93f8-439b-ab00-e5cd43243d4e" />
 
