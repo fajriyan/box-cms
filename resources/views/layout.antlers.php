@@ -144,6 +144,8 @@
           }
         }
     </script>
+    {{ livewire:styles }}
+    {{ livewire:scripts }}
   </head>
   <body class="">
     {{ livewire:Components.Navbar }}
