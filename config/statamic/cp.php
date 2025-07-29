@@ -53,7 +53,7 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+        // 'getting_started',
     ],
 
     /*

@@ -1,4 +1,9 @@
-# admin:
-#   title: Administrator
-#   permissions:
-#     - super
+admin:
+  title: Administrator
+  super: true
+  roles:
+    - admin
+  permissions:
+    - super
+    - access cp
+    - view admin bar
