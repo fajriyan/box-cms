@@ -6,11 +6,19 @@
 @vite('resources/css/cp.css')
 @section('content')
 @php
-   use Statamic\Facades\Form;
-   use Statamic\Facades\Collection;
-   use Illuminate\Support\Facades\DB;
+   $cacheMinutes = 300;
 
-   $pages = Collection::find('pages')->queryEntries()->count();
+   $career = cache()->remember('career', $cacheMinutes * 60, function () {
+      return \Statamic\Facades\Collection::find('career')->queryEntries()->count();
+   });
+
+   $pages = cache()->remember('pages', $cacheMinutes * 60, function () {
+      return \Statamic\Facades\Collection::find('pages')->queryEntries()->count();
+   });
+
+   $mediaLibrary = cache()->remember('dashboard_media_count', $cacheMinutes * 60, function () {
+      return \Illuminate\Support\Facades\DB::table('assets_meta')->count();
+   });
 @endphp
 
 
@@ -18,31 +26,35 @@
    <div class="card card-lg p-10 text-css-cp content w-full ">
       <h2 style="font-size: 20px; font-weight: 700; color: rgb(115 128 140 / var(--tw-text-opacity));">
          Informasi Website</h2>
-      <div class="flex gap-3">
-         <div class="mt-5 flex" style="gap: 15px">
-            <div class="card-in-statistic" style="padding: 15px; border: 1px solid #2e9fff; border-radius: 5px;">
-               <p style="font-size: 25px; font-weight: 700">{{ $pages }}</p>
-               <p>
-                  Jumlah Halaman
-               </p>
+      <div class="grid grid-cols-4 gap-3 mt-10">
+         <a href="/admin-panel/collections/career"
+            class="bg-white border border-gray-200 rounded-lg p-3 !block hover:!bg-slate-100 cursor-pointer">
+            <div class="flex items-center text-gray-900 dark:text-gray-100 text-sm">
+               Total Career
             </div>
-         </div>
-         <div class="mt-5 flex" style="gap: 15px">
-            <div class="card-in-statistic" style="padding: 15px; border: 1px solid #2e9fff; border-radius: 5px;">
-               <p style="font-size: 25px; font-weight: 700">331 +</p>
-               <p>
-                  User Aktif
-               </p>
+            <div class="mt-2 text-2xl font-bold spacing-sm text-black dark:text-white">
+               {{ $career ?? "-" }}
             </div>
-         </div>
-         <div class="mt-5 flex" style="gap: 15px">
-            <div class="card-in-statistic" style="padding: 15px; border: 1px solid #2e9fff; border-radius: 5px;">
-               <p style="font-size: 25px; font-weight: 700">72 +</p>
-               <p>
-                  Fotografer Professional
-               </p>
+         </a>
+         <a href="/admin-panel/collections/pages"
+            class="bg-white border border-gray-200 rounded-lg p-3 !block hover:!bg-slate-100 cursor-pointer"
+            style="cursor: auto;">
+            <div class="flex items-center text-gray-900 dark:text-gray-100 text-sm">
+               Total Page
             </div>
-         </div>
+            <div class="mt-2 text-2xl font-bold spacing-sm text-black dark:text-white">
+               {{ $pages ?? "-" }}
+            </div>
+         </a>
+         <a href="/admin-panel/assets/browse/assets"
+            class="bg-white border border-gray-200 rounded-lg p-3 !block hover:!bg-slate-100 cursor-pointer">
+            <div class="flex items-center text-gray-900 dark:text-gray-100 text-sm">
+               Total Media
+            </div>
+            <div class="mt-2 text-2xl font-bold spacing-sm text-black dark:text-white">
+               {{ $mediaLibrary ?? "-" }}
+            </div>
+         </a>
       </div>
 
       <livewire:components.chart />
@@ -114,8 +126,8 @@
 </div>
 
 @include('statamic::partials.docs-callout', [
-      'topic' => __('Widgets'),
-      'url' => Statamic::docsUrl('widgets')
+   'topic' => __('Widgets'),
+   'url' => Statamic::docsUrl('widgets')
 ])
 
 @stop

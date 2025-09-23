@@ -13,7 +13,7 @@ return [
 
     'enabled' => env('CP_ENABLED', true),
 
-    'route' => env('CP_ROUTE', 'cp'),
+    'route' => env('CP_ROUTE', 'admin'),
 
     /*
     |--------------------------------------------------------------------------
@@ -120,7 +120,7 @@ return [
     |
     */
 
-    'theme' => env('STATAMIC_THEME', 'rad'),
+    'theme' => env('STATAMIC_THEME', 'business'),
 
     /*
     |--------------------------------------------------------------------------
