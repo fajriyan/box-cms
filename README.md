@@ -27,7 +27,6 @@ cms project using laravel, this time I used the statamic package as the core of 
 - [Admin] Dynamic Content Live Preview
   <img width="1680" height="864" alt="image" src="https://github.com/user-attachments/assets/d109caa0-0ce8-4146-a2d6-7cc5b6d72b09" />
 
-   
 - [Admin] Media Library
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/10a7a15f-93f8-439b-ab00-e5cd43243d4e" />
 
@@ -42,6 +41,10 @@ cms project using laravel, this time I used the statamic package as the core of 
 
 - [Admin] Detail Booking
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/101b261d-41be-4de4-bccd-226419703547">
+
+- [Admin] Management Sitemap (Custom)
+  <img width="1680" height="765" alt="image" src="https://github.com/user-attachments/assets/8cbf963c-0496-43bd-99b2-068bc112f6a9" />
+   
 
 - [Site] Homepage
   <img width="1680" alt="image" src="https://github.com/user-attachments/assets/5a27622e-a05f-4a6c-9d27-939e67999a6b">
@@ -76,10 +79,11 @@ a few things that need to be prepared:
 - composer v2.7^ or above
 - node v20.15^ or above
 
-## Access Login
+## Access Login & More
 - email : fajriyan@fajriyan.com
 - password : fajriyan
 - url : http://127.0.0.1:8000/admin/auth/login
+- url sitemap : http://127.0.0.1:8000/sitemap-index.xml (after generate)
 
 
 ### Project Run Steps
