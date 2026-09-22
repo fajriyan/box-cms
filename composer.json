@@ -12,13 +12,11 @@
         "php": "^8.2",
         "alt-design/alt-redirect": "^1.6",
         "barryvdh/laravel-dompdf": "^3.0",
-        "flowframe/laravel-trend": "^0.3.0",
-        "justbetter/statamic-image-optimize": "^3.2",
-        "laravel/framework": "^11",
+        "laravel/framework": "^12.61.1",
         "laravel/tinker": "^2.9",
         "marcorieser/statamic-livewire": "5.3.0",
-        "statamic/cms": "5.73.17",
-        "statamic/eloquent-driver": "^4.15"
+        "statamic/cms": "5.74.4",
+        "statamic/eloquent-driver": "4.23.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",
